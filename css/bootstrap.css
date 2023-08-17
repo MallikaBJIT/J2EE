@@ -1,0 +1,62 @@
+body {
+    background: radial-gradient(rgb(252, 250, 252), rgb(228, 247, 247), rgb(245, 252, 252), rgb(237, 242, 242));
+}
+
+.header {
+    background-image: url("../image/bg_logo.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    box-shadow: -2px 6px 5px -3px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: -2px 6px 5px -3px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -2px 6px 5px -3px rgba(0, 0, 0, 0.75);
+}
+
+img {
+    max-width: 200px;
+    max-height: 50px;
+    border-radius: 50%;
+}
+
+#registration-form {
+    background-color: #e1e4e7;
+    padding: 16px;
+    border-radius: 6px;
+}
+
+#show-message {
+    display: none;
+    background-color: rgb(119, 126, 116);
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    border-radius: 2px;
+    box-shadow: 5px 5px 5px rgb(98, 98, 100);
+}
+
+.modal-backdrop {
+    background-color: gray;
+}
+
+.modal-content {
+    background: radial-gradient(rgb(196, 242, 208), rgb(225, 250, 231), rgb(247, 252, 249)) !important;
+}
+
+.reveal {
+    position: relative;
+    transform: translateY(120px);
+    opacity: 0;
+    transition: all 1.5s ease;
+}
+
+.reveal.active {
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.social-media {
+    display: flex;
+    gap: 16px;
+}

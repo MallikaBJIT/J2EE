@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tech Conference Registration</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="stylesheet" type="text/css" href="../css/bootstrap.css" />
+
+</head>
+
+<body>
+  <div class="header">
+    <img src="../image/logo.jpg" alt="Logo">
+    <h2>Welcome to the BJIT Tech Conference, 2023</h2>
+    <marquee style="font-size: 30px; margin-top: 10px;"> Hurry Up!! Register for the sessions. </marquee>
+  </div>
+
+  <div class="container mt-5">
+    <h2 style="text-align: center;">Sessions Schedule</h2>
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th>Session Name</th>
+          <th>Speaker</th>
+          <th>Date</th>
+          <th>Time</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- table data from displaySession() -->
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Session details start -->
+  <div class="modal fade" id="sessionModal-1" tabindex="-1" role="dialog" aria-labelledby="sessionModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="sessionModalLabel">New Tools & Technologies</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Sarwar Miral</p>
+          <p>Project Manager<br />Time: 09:00 AM</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Register</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="sessionModal-2" tabindex="-1" role="dialog" aria-labelledby="sessionModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="sessionModalLabel">J2EE Session</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Ujjal Kumar Saha</p>
+          <p>Project Manager<br>Time: 10:00 AM</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Register</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="sessionModal-3" tabindex="-1" role="dialog" aria-labelledby="sessionModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="sessionModalLabel">AI Technologies</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Nani Gopal Barai</p>
+          <p>Project Manager<br> Time: 10:00 AM</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Register</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Session details end -->
+
+  <div class="container mt-5 reveal" id="registration-form">
+    <div class="container mt-4" id="show-message">
+      <p style="padding: 3px;">Registration Successful</p>
+    </div>
+
+    <h2 style="text-align: center;">Registration Form</h2>
+    <form action="" class="needs-validation" novalidate>
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" name="name" placeholder="Enter Your Name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" placeholder="Enter Your Email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="organization">Organization</label>
+        <input type="text" class="form-control" id="organization" placeholder="Organization Name" name="organization"
+          required>
+      </div>
+      <div class="form-group">
+        <label for="session">Preferred Session</label>
+        <select class="form-control" id="session" name="session" required>
+          <option value="">Select a session</option>
+          <option value="session1">New Tools & Technologies</option>
+          <option value="session1">J2EE</option>
+          <option value="session1">AI Technologies</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary" id="register">Register</button>
+    </form>
+  </div>
+
+  <!-- Footer -->
+  <div class="mt-5 reveal">
+    <footer class="text-center text-lg-start bg-light text-muted">
+      <!-- Section: Social media -->
+      <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+        <!-- Left -->
+        <div class="me-5 d-none d-lg-block">
+          <span>Get connected with us on social networks:</span>
+        </div>
+        <!-- Left -->
+
+        <!-- Right -->
+        <div class="social-media">
+          <a href="https://www.facebook.com/bjitltd/" class="me-4 text-reset">
+            <i class="bi bi-facebook"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="bi bi-twitter"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="bi bi-google"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="bi bi-instagram"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="bi bi-linkedin"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="bi bi-github"></i>
+          </a>
+        </div>
+        <!-- Right -->
+      </section>
+      <!-- Section: Social media -->
+
+      <!-- Section: Links  -->
+      <section class="">
+        <div class="container text-center text-md-start mt-5">
+          <!-- Grid row -->
+          <div class="row mt-3">
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+              <!-- Content -->
+              <h6 class="text-uppercase fw-bold mb-4">
+                <i class="bi bi-gem me-3"></i> BJIT
+              </h6>
+              <p>
+                BJIT Tech Event 2023 is a three-day conference that will explore the latest trends in artificial
+                intelligence, J2EE, new technologies, and tools. The event will feature keynote speakers, panel
+                discussions, workshops, and hands-on labs. Attendees will have the opportunity to learn from experts in
+                the field and network with other professionals.
+              </p>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+              <p><i class="bi bi-house-door-fill"></i> House-1, Road-2E Baridhara J Block, Dhaka-1212, Bangladesh</p>
+              <p>
+                <i class="bi bi-envelope me-3"></i>
+                bjit@bjitgroup.com
+              </p>
+              <p><i class="bi bi-phone me-3"></i> + 880-1717-800817</p>
+              <p><i class="bi bi-printer"></i> + 01 234 567 89</p>
+            </div>
+            <!-- Grid column -->
+          </div>
+          <!-- Grid row -->
+        </div>
+      </section>
+      <!-- Section: Links  -->
+
+      <!-- Copyright -->
+      <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+        © 2021 Copyright:
+        <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+  </div>
+  <!-- Footer -->
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="../js/bootstrap.js"></script>
+</body>
+
+</html>
